@@ -9,10 +9,8 @@ class App extends Component {
     return (
       <div className="App">
         <h2>Root</h2>
-        <AddNumberRoot onClick={function (size) {
-          this.setState({ number: this.state.number + size });
-        }.bind(this)}></AddNumberRoot>
-        <DisplayNumberRoot number={this.state.number}></DisplayNumberRoot>
+        <AddNumberRoot></AddNumberRoot>
+        <DisplayNumberRoot></DisplayNumberRoot>
       </div>
     );
   }
