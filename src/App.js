@@ -3,15 +3,19 @@ import './App.css';
 import AddNumberRoot from './components/AddNumberRoot';
 import DisplayNumberRoot from './components/DisplayNumberRoot';
 
-
-function App() {
-  return (
-    <div className="App">
-      <h2>Root</h2>
-      <AddNumberRoot></AddNumberRoot>
-      <DisplayNumberRoot></DisplayNumberRoot>
-    </div>
-  );
+class App extends Component {
+  state = { number: 0 }
+  render() {
+    return (
+      <div className="App">
+        <h2>Root</h2>
+        <AddNumberRoot onClick={function (size) {
+          this.setState({ number: this.state.number + size });
+        }.bind(this)}></AddNumberRoot>
+        <DisplayNumberRoot number={this.state.number}></DisplayNumberRoot>
+      </div>
+    );
+  }
 }
 
 export default App;
