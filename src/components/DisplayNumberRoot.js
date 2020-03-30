@@ -5,7 +5,7 @@ export default class DisplayNumberRoot extends Component {
         return (
             <div>
                 <h2>Display Number Root</h2>
-                <DisplayNumber></DisplayNumber>
+                <DisplayNumber unit="kg"></DisplayNumber>
             </div>
         );
     }

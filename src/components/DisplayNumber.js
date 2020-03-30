@@ -5,6 +5,7 @@ export default class DisplayNumber extends Component {
         return (
             <div><h2>Display Number</h2>
                 <input type="text" value={this.props.number} readOnly></input>
+                {this.props.unit}
             </div>
         );
     }
