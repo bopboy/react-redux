@@ -2,7 +2,14 @@ import React, { Component } from 'react';
 import AddNumber from '../components/AddNumber';
 // import store from '../store';
 import { connect } from 'react-redux';
-export default connect()(AddNumber);
+function mapReduxDispatchToReactProps(dispatch) {
+    return {
+        onClick: function (size) {
+            dispatch({ type: 'INCREMENT', size: size })
+        }
+    };
+}
+export default connect(null, mapReduxDispatchToReactProps)(AddNumber);
 // export default class extends Component {
 //     render() {
 //         return (<AddNumber onClick={function (size) {
